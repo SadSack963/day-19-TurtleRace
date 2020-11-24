@@ -1,5 +1,5 @@
 from turtle import Turtle, Screen
-from random import randint, choice
+from random import randint
 
 colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"]
 turtles = []
@@ -22,7 +22,8 @@ race_running = False
 choices = f"{colors[0]}"
 for i in range(1, len(colors)):
     choices += "/" + colors[i]
-user_choice = s.textinput(title="Turtle Race", prompt=f"Which turtle do you think will win the race?\n{choices} : ").lower()
+user_choice = s.textinput(title="Turtle Race",
+                          prompt=f"Which turtle do you think will win the race?\n{choices} : ").lower()
 if user_choice:
     race_running = True
 
